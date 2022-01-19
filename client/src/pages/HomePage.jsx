@@ -1,5 +1,4 @@
-import logo from '../logo.svg';
-import '../App.css';
+import "../App.css";
 
 function HomePage() {
   return <div className='App'>Welcome to Dog Chat!</div>;
