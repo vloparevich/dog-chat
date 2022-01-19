@@ -37,22 +37,28 @@ export default function LogIn({ authenticate }) {
   }
 
   return (
-    <div>
-      <h1>Log In</h1>
-      <form onSubmit={handleFormSubmission} className="signup__form">
-        <label htmlFor="input-username">Username</label>
+    <div class="mx-auto my-40 p-4 max-w-lg">
+      <h1 class="text-4xl font-bold p-4">Log In</h1>
+      <form
+        onSubmit={handleFormSubmission}
+        className="signup__form"
+        class="flex flex-col"
+      >
+        <label htmlFor="input-username"></label>
         <input
+          class="border rounded-full text-center m-3 p-2"
           id="input-username"
           type="text"
           name="username"
-          placeholder="username"
+          placeholder="Username"
           value={username}
           onChange={handleInputChange}
           required
         />
 
-        <label htmlFor="input-password">Password</label>
+        <label htmlFor="input-password"></label>
         <input
+          class="border rounded-full text-center m-3 p-2"
           id="input-password"
           type="password"
           name="password"
@@ -70,8 +76,12 @@ export default function LogIn({ authenticate }) {
           </div>
         )}
 
-        <button className="button__submit" type="submit">
-          Submit
+        <button
+          className="button__submit"
+          type="submit"
+          class="rounded-full m-3 p-3 font-bold bg-violet-900 focus:bg-violet-800 text-white"
+        >
+          Log In with Username
         </button>
       </form>
     </div>

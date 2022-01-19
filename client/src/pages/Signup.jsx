@@ -42,7 +42,7 @@ export default function Signup({ authenticate }) {
 
   return (
     <div class="mx-auto my-40 p-4 max-w-lg">
-      <h1 class="text-4xl font-bold p-4">Sign Up to Dog Chat</h1>
+      <h1 class="text-4xl font-bold p-4">Sign Up to Paw Talk</h1>
       <form
         onSubmit={handleFormSubmission}
         className="auth__form"
@@ -83,9 +83,9 @@ export default function Signup({ authenticate }) {
         <button
           className="button__submit"
           type="submit"
-          class="rounded-full m-3 p-2 font-bold bg-violet-900 text-white"
+          class="rounded-full m-3 p-3 font-bold bg-violet-900 focus:bg-violet-800 text-white"
         >
-          Submit
+          Continue
         </button>
       </form>
     </div>
