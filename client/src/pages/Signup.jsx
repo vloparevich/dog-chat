@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { signup } from "../services/auth";
 import { useNavigate } from "react-router-dom";
-import "./auth.css";
+// import "./auth.css";
 import * as PATHS from "../utils/paths";
 import * as USER_HELPERS from "../utils/userToken";
 
@@ -41,22 +41,28 @@ export default function Signup({ authenticate }) {
   }
 
   return (
-    <div>
-      <h1>Sign Up</h1>
-      <form onSubmit={handleFormSubmission} className="auth__form">
-        <label htmlFor="input-username">Username</label>
+    <div class="mx-auto my-40 p-4 max-w-lg">
+      <h1 class="text-4xl font-bold p-4">Sign Up to Dog Chat</h1>
+      <form
+        onSubmit={handleFormSubmission}
+        className="auth__form"
+        class="flex flex-col"
+      >
+        <label htmlFor="input-username"></label>
         <input
+          class="border rounded-full text-center m-3 p-2"
           id="input-username"
           type="text"
           name="username"
-          placeholder="Text"
+          placeholder="Username"
           value={username}
           onChange={handleInputChange}
           required
         />
 
-        <label htmlFor="input-password">Password</label>
+        <label htmlFor="input-password"></label>
         <input
+          class="border rounded-full text-center m-3 p-2"
           id="input-password"
           type="password"
           name="password"
@@ -74,7 +80,11 @@ export default function Signup({ authenticate }) {
           </div>
         )}
 
-        <button className="button__submit" type="submit">
+        <button
+          className="button__submit"
+          type="submit"
+          class="rounded-full m-3 p-2 font-bold bg-violet-900 text-white"
+        >
           Submit
         </button>
       </form>
