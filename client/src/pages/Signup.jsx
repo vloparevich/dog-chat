@@ -25,6 +25,7 @@ export default function Signup({ authenticate }) {
       username,
       password,
     };
+    console.log("hitting the handle submit");
     signup(credentials).then((res) => {
       if (!res.status) {
         // unsuccessful signup
